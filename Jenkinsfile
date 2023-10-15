@@ -7,7 +7,7 @@ pipeline {
       }
     }
 
-    stage('Error') {
+    stage('Log') {
       steps {
         sh 'ls -la'
       }
@@ -23,6 +23,12 @@ pipeline {
       steps {
         sh '''echo \'dockerhub login\'
 '''
+      }
+    }
+
+    stage('Push to Dockerhub') {
+      steps {
+        sh 'echo \'push to dockerhub\''
       }
     }
 

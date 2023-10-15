@@ -19,16 +19,9 @@ pipeline {
       }
     }
 
-    stage('login to Dockerhub') {
+    stage('Test') {
       steps {
-        sh '''echo \'dockerhub login\'
-'''
-      }
-    }
-
-    stage('Push to Dockerhub') {
-      steps {
-        sh 'echo \'push to dockerhub\''
+        sh 'echo \'testing\''
       }
     }
 
